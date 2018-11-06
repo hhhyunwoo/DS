@@ -19,5 +19,16 @@ public class NameList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_list);
 
+        Button pressButton = (Button)findViewById(R.id.btn_add);
+        final EditText editName = (EditText)findViewById(R.id.editName);
+        final EditText editNum = (EditText)findViewById(R.id.editNum);
+
+        pressButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RegisterActivity.adapter.addItem(editName.getText().toString(),
+                        editNum.getText().toString());
+            }
+        });
     }
 }

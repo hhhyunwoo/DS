@@ -47,12 +47,7 @@ public class Bluetooth {
 
     TextView info_textview;
 
-    void sendData(int code) throws IOException
-    {///////////////////////////////////////////////////////
-        OutputStreamWriter writer = new OutputStreamWriter(mmSocket.getOutputStream());
-        String msg = String.format("%d",code);
-        mmOutputStream.write(msg.getBytes());
-    }
+
     public String getDevicename() {
         return devicename;
     }
